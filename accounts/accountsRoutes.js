@@ -1,6 +1,6 @@
 
 const { verifySignUp } = require("../middleware");
-const controller = require("./accountsController");
+const accountsController = require("./accountsController");
 
 module.exports = function(app) {
     app.use(function(req, res, next) {
@@ -9,7 +9,7 @@ module.exports = function(app) {
             "x-access-token, Origin, Content-Type, Accept"
         );
         next();
-    }); 
+    });  
 
     app.post(
         "/api/accounts/register", 
@@ -17,8 +17,8 @@ module.exports = function(app) {
             verifySignUp.checkDuplicateUsernameOrEmail,
             //verifySignUp.checkRolesExisted
         ], 
-        controller.register
+        accountsController.register
     );
 
-    app.post("/api/accounts/login", controller.login);
+    app.post("/api/accounts/login", accountsController.login);
 };

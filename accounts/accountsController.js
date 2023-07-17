@@ -1,5 +1,5 @@
 
-const db = require("../configuration/sequelizeConfig");
+const db = require("../dbconfiguration/sequelizeConfig");
 const config = require("../middleware/authconfig");
 const User = db.user;
 const Role = db.role;

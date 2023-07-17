@@ -1,5 +1,5 @@
 
-const db = require("../configuration/sequelizeConfig");
+const db = require("../dbconfiguration/sequelizeConfig");
 const ROLES = db.ROLES;
 const User = db.user;
 

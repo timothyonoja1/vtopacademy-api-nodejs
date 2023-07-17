@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // database
-const db = require("./configuration/sequelizeConfig");
+const db = require("./dbconfiguration/sequelizeConfig");
 const Role = db.role;
 
 // db.sequelize.sync();
@@ -29,6 +29,8 @@ db.sequelize.sync({force: true}).then(() => {
 // simple route
 require('./accounts/accountsRoutes')(app);
 require('./users/userRoutes')(app);
+require('./schools/schoolsRoute')(app);
+require('./kclasses/kclassesRoutes')(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

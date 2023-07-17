@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const config = require("./authconfig")
-const db = require("../configuration/sequelizeConfig");
+const db = require("../dbconfiguration/sequelizeConfig");
 const User = db.user;
 
 verifyToken = (req, res, next) => {
