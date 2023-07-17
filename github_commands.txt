@@ -1,0 +1,12 @@
+
+cd /Users/timothyonoja/Desktop/vtopacademy/node-js
+
+git init -b main
+
+git add .
+
+git commit -m "Implement Authentication and authorization"
+
+git remote add origin <REMOTE_URL>
+
+git push -u origin main

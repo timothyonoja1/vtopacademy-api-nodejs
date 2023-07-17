@@ -1,0 +1,8 @@
+cd /Users/timothyonoja/Desktop/vtopacademy/node-js
+
+npm install express mongoose sequelize pg pg-hstore cors jsonwebtoken bcryptjs --save
+
+// Run
+node app.js
+
+curl -X POST localhost:8080/api/accounts/register -H 'Content-type:application/json' -d '{"username": "timothy", "password": "12345678", "email": "timothy@gmail.com", "roles": ["user", "moderator"]}'
