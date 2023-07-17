@@ -7,6 +7,6 @@ git add .
 
 git commit -m "Implement Authentication and authorization"
 
-git remote add origin <REMOTE_URL>
+git remote add origin https://github.com/timothyonoja1/vtopacademy-api-nodejs.git
 
 git push -u origin main
